@@ -7,17 +7,17 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">F</span>
+              <span className="text-primary-foreground font-bold text-sm">AI</span>
             </div>
-            <span className="text-xl font-bold text-foreground">Feedly</span>
+            <span className="text-xl font-bold text-foreground">AI Assistant</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              Meet Leo
+              Features
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              Solutions
+              Use Cases
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               Pricing

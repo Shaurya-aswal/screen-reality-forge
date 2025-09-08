@@ -8,15 +8,15 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left animate-fade-in-up">
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Goodbye
+              Meet your
               <br />
-              <span className="text-foreground">information</span>
+              <span className="text-primary">AI assistant</span>
               <br />
-              <span className="text-foreground">overload</span>
+              <span className="text-foreground">for everything</span>
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              Keep up with the topics and trends you care about, without the overwhelm
+              Get instant answers, solve complex problems, and streamline your workflow with our intelligent AI companion
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -24,7 +24,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-primary hover:bg-primary-light text-primary-foreground px-8 py-6 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                GET STARTED FOR FREE
+                START CHATTING FOR FREE
               </Button>
               
               <Button 
