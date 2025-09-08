@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-import heroIllustration from "@/assets/hero-illustration.png";
 
 const HeroSection = () => {
   return (
@@ -40,24 +39,19 @@ const HeroSection = () => {
           </div>
           
           <div className="relative">
-            <div className="relative z-10 animate-float">
+            <div className="relative z-10">
               <img 
-                src={heroIllustration} 
-                alt="Person sitting with laptop surrounded by floating information cards" 
+                src="/lovable-uploads/94ac2e36-70bf-452f-a24a-60dd4ff2dd1c.png" 
+                alt="Professional with tablet in a modern digital environment" 
                 className="w-full max-w-lg mx-auto"
               />
             </div>
-            
-            {/* Floating elements for visual enhancement */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary-glow rounded-lg animate-float opacity-30" style={{ animationDelay: '0.5s' }}></div>
-            <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-accent rounded-full animate-float opacity-40" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 -right-8 w-12 h-12 bg-primary/20 rounded-lg animate-float opacity-50" style={{ animationDelay: '1.5s' }}></div>
           </div>
         </div>
       </div>
       
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/10 via-transparent to-accent/5 -z-10"></div>
+      {/* Clean integrated background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/5 via-background to-background -z-10"></div>
     </section>
   );
 };
