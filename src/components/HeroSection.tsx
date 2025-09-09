@@ -5,9 +5,9 @@ const HeroSection = () => {
   return (
     <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 items-center max-w-7xl mx-auto">
-          <div className="text-left lg:pr-8 xl:pr-12 order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight tracking-tight">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-10 items-center max-w-7xl mx-auto">
+          <div className="text-left lg:pr-4 xl:pr-6 order-2 lg:order-1">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight tracking-tight text-center sm:text-left">
               Your digital
               <br />
               <span className="text-primary font-extrabold">farming assistant</span>
@@ -38,7 +38,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative order-1 lg:order-2 lg:pl-4 xl:pl-8">
+          <div className="relative order-1 lg:order-2 lg:pl-2 xl:pl-4">
             <div className="relative z-10 flex justify-center lg:justify-end">
               <img 
                 src="/lovable-uploads/94ac2e36-70bf-452f-a24a-60dd4ff2dd1c.png" 
