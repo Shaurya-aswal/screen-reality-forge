@@ -1,110 +1,43 @@
-import React from "react";
-import { LayoutGrid } from "@/components/ui/layout-grid";
+import { MessageCircle, Shield, Sprout, CloudRain, Target } from "lucide-react";
 
 const FeaturesSection = () => {
-  const FeatureOne = () => {
-    return (
-      <div>
-        <p className="font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-2">
-          Harvesting Dreams
-        </p>
-        <p className="font-normal text-base text-white/90 mb-4">
-          Kerala's Agricultural Legacy Reimagined
-        </p>
-        <p className="font-normal text-sm sm:text-base max-w-lg text-neutral-200">
-          ✅ Voice + Text Chat in Malayalam & English<br/>
-          ✅ Government Schemes Information<br/>
-          ✅ Real-time Weather Updates
-        </p>
-      </div>
-    );
-  };
-
-  const FeatureTwo = () => {
-    return (
-      <div>
-        <p className="font-bold text-xl sm:text-2xl md:text-3xl text-white mb-2">
-          Cultivating Growth
-        </p>
-        <p className="font-normal text-sm text-white/90 mb-3">
-          Hands-On Farming, Kerala's Heritage
-        </p>
-        <p className="font-normal text-xs sm:text-sm max-w-lg text-neutral-200">
-          ✅ Crop & Pest Advisory<br/>
-          ✅ Smart Irrigation Reminders<br/>
-          ✅ Expert Disease Prevention
-        </p>
-      </div>
-    );
-  };
-
-  const FeatureThree = () => {
-    return (
-      <div>
-        <p className="font-bold text-xl sm:text-2xl md:text-3xl text-white mb-2">
-          Bundles of Joy
-        </p>
-        <p className="font-normal text-sm text-white/90 mb-3">
-          Community & Abundance in Every Harvest
-        </p>
-        <p className="font-normal text-xs sm:text-sm max-w-lg text-neutral-200">
-          ✅ Community Support<br/>
-          ✅ Harvest Optimization<br/>
-          ✅ Sustainable Farming
-        </p>
-      </div>
-    );
-  };
-
-  const FeatureFour = () => {
-    return (
-      <div>
-        <p className="font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-2">
-          Harvesting Intelligence
-        </p>
-        <p className="font-normal text-base text-white/90 mb-4">
-          AI-Powered Guidance for Kerala Farmers
-        </p>
-        <p className="font-normal text-sm sm:text-base max-w-lg text-neutral-200">
-          ✅ Personalized Recommendations<br/>
-          ✅ RAG + Fine-tuned LLM Technology<br/>
-          ✅ Smart Agricultural Insights
-        </p>
-      </div>
-    );
-  };
-
-  const cards = [
+  const features = [
     {
-      id: 1,
-      content: <FeatureOne />,
-      className: "md:col-span-2",
-      thumbnail: "/lovable-uploads/dbe884c3-b406-4ca7-bd56-d65d1c520d96.png",
+      icon: MessageCircle,
+      title: "Voice + Text Chat",
+      description: "Communicate in Malayalam & English through voice or text for maximum accessibility",
+      color: "text-blue-600"
     },
     {
-      id: 2,
-      content: <FeatureTwo />,
-      className: "col-span-1",
-      thumbnail: "/lovable-uploads/a24bd889-92ce-4312-8fc5-98f1a127265e.png",
+      icon: Shield,
+      title: "Government Schemes",
+      description: "Get updated information on all Kerala government schemes and subsidies for farmers",
+      color: "text-green-600"
     },
     {
-      id: 3,
-      content: <FeatureThree />,
-      className: "col-span-1",
-      thumbnail: "/lovable-uploads/f26473ac-2faa-4b25-a393-86dd74bf77c9.png",
+      icon: Sprout,
+      title: "Crop & Pest Advisory",
+      description: "Expert advice on crop selection, pest management, and disease prevention",
+      color: "text-emerald-600"
     },
     {
-      id: 4,
-      content: <FeatureFour />,
-      className: "md:col-span-2",
-      thumbnail: "/lovable-uploads/5c3c6b38-e7be-40cc-ba84-e15980a6330a.png",
+      icon: CloudRain,
+      title: "Weather & Irrigation",
+      description: "Real-time weather updates and smart irrigation reminders for optimal farming",
+      color: "text-cyan-600"
     },
+    {
+      icon: Target,
+      title: "Personalized Recommendations",
+      description: "Tailored farming advice based on your location, crop type, and seasonal conditions",
+      color: "text-purple-600"
+    }
   ];
 
   return (
     <section className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Key Features
@@ -114,8 +47,31 @@ const FeaturesSection = () => {
             </p>
           </div>
           
-          <div className="min-h-[600px] sm:min-h-[700px] lg:min-h-[800px]">
-            <LayoutGrid cards={cards} />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div 
+                  key={index}
+                  className="bg-card rounded-xl p-6 sm:p-8 shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-primary/10 p-3 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
+                      <IconComponent className={`w-6 h-6 ${feature.color}`} />
+                    </div>
+                    <div className="w-4 h-4 bg-primary rounded-full flex-shrink-0"></div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    ✅ {feature.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
