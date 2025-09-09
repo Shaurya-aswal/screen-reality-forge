@@ -5,21 +5,21 @@ const HeroSection = () => {
   return (
     <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="text-left animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 items-center max-w-7xl mx-auto">
+          <div className="text-left lg:pr-8 xl:pr-12 order-2 lg:order-1">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight tracking-tight">
               Your digital
               <br />
-              <span className="text-primary">farming assistant</span>
+              <span className="text-primary font-extrabold">farming assistant</span>
               <br />
               <span className="text-foreground">for Kerala</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-xl leading-relaxed font-medium">
               Get expert agricultural advice, weather updates, and crop management solutions tailored for Kerala farmers
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary-light text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
@@ -38,12 +38,12 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative mt-8 lg:mt-0">
-            <div className="relative z-10">
+          <div className="relative order-1 lg:order-2 lg:pl-4 xl:pl-8">
+            <div className="relative z-10 flex justify-center lg:justify-end">
               <img 
                 src="/lovable-uploads/94ac2e36-70bf-452f-a24a-60dd4ff2dd1c.png" 
                 alt="Kerala farmer using digital farming assistance" 
-                className="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto"
+                className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg h-auto object-contain"
               />
             </div>
           </div>
@@ -51,7 +51,7 @@ const HeroSection = () => {
       </div>
       
       {/* Clean integrated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/5 via-background to-background -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/3 via-background to-background -z-10"></div>
     </section>
   );
 };
